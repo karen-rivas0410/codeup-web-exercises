@@ -1,0 +1,19 @@
+/*.fancy-header {*/
+    /*color: purple; !* single line comment *!*/
+    /*text-decoration: underline;*/
+/*}*/
+ .fancy-header{
+     color: #00e222;
+     font-family: "Gill Sans";
+     text-align: center
+}
+header {
+    text-align: center;
+}
+
+body {
+    background-image: radial-gradient(pink,blue);
+    background-color: #ffe;
+
+
+}
