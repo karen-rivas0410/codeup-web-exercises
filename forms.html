@@ -9,37 +9,36 @@
         <form method="POST" action="http://http-inspector.glitch.me/">
             <div>
                 <label for="email">Email</label>
-                <input id="email" name="email" type="text">
+                <input id="email" name="email" type="text" placeholder="Enter your email">
             </div>
             <div>
-                <label for="password" placeholder="Password">Password</label>
-                <input id="password" name="password" type="password">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Enter your password">
             </div>
-            <div>
-            <input type="submit" value="Submit">
-            </div>
-                </p>
-            </form>
-            <label for="bio">Bio Description</label><br>
-            <textarea id="bio" name="bio"></textarea>
+            <br>
+                <label for="bio">Bio Description</label><br>
+                <textarea id="bio" name="bio"></textarea>
+        </form>
             <form>
                 <h4>How did you here about us?</h4>
-                <label for="ad"></label>
-                     <input id="type="radio" name="ad[]" value="billboard">Billboard<br>
-                     <input type="radio" name="ad[]" value="radio advertisment">Radio advertisment<br>
-                     <input type="radio" name="ad[]" value="internet advertisment">Internet advertisment<br>
-                     <input type="radio" name="ad[]" value="other">Other<br>
+                <label for="ad[]"></label>
+                     <input id="ad[]" type="radio" name="ad1" value="billboard">Billboard<br>
+                     <input id="ad[]" type="radio" name="ad2" value="radio">Radio Advertisement<br>
+                     <input id="ad[]" type="radio" name="ad3" value="internet">Internet Advertisement<br>
+                     <input id="ad[]" type="radio" name="ad4" value="other">Other<br>
              </form>
             <form>
                 <h4>What web browser are you using?</h4>
                 <label for="web"></label>
-                <input id="web" name="" type="">
-                    <select>
-                        <option value="chrome">Chrome</option>
-                        <option value="internet_explorer">Internet Explorer</option>
-                        <option value="safari">Safari</option>
-                        <option value="opera">Opera</option>
-                    </select>
+                <select id="web" name="web">
+                    <option value="chrome" name="web">Chrome</option>
+                    <option value="internet_explorer" name="web">Internet Explorer</option>
+                    <option value="safari" name="web">Safari</option>
+                    <option selected value="opera" name="web">Opera</option>
+                </select>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
             </form>
     </body>
 </html>

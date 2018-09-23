@@ -15,10 +15,15 @@ form {
     width: 400px;
     padding:100px;
     border:10px;
-    margin:0;
+    margin:1em;
 
-    /* This form should be separated from other elements by 1em */
-    /* There must be 1em between the content and the border of this element */
+
+    /*
+    /* This form should be separated from other elements by 1em--
+    refering to the margin */
+     */
+    /* There must be 1em between the content and the border of this element--
+     refering to the padding*/
 }
 
 fieldset {
@@ -27,22 +32,28 @@ fieldset {
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     background-color: white;
     border-style: none;
-    /* There must be 1em between the content and the border of this element */
-    /* It should have no border-DONE*/
-    /* Its background should be white-DONE */
+
+    /* There must be 1em between the content and the border of this element
+    --refering to the padding*/
+    /* It should have no border-DONE
+    can also try border: none*/
+    /* Its background should be white-DONE
+    or can use background:white */
 }
 
 .width-80 {
     width: 80%;
     margin: 0 auto;
-    /* The element with this class should 80% of the width and it must be centered */
+    /* The element with this class should 80% of the width and it must be centered
+    margin auto will center page*/
     /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
 }
 
 .form-group {
     width:100%;
-    /* This element must use 100% of the width */
-    /* It should have a separation of .5em from elements on top of it and below it*/
+    /* This element must use 100% of the width-DONE*/
+    /* It should have a separation of .5em from elements on top of it and below it--
+    REFERS TO MARGIN -X AND Y AXIS*/
 }
 
 .form-label {
@@ -52,11 +63,13 @@ fieldset {
 
 .form-control {
     width: 100%;
-    width: calc(100% - 80px);
+    width: calc(100% - 4px);
     /* property: calc(expression) */
 
-    /* There must be 4px on top of the text and below the text of an input with this class */
-    /* It should have a separation of .5em from elements on top of it and below it */
+    /* There must be 4px on top of the text and below the text of an input with this class
+    --refers to padding */
+    /* It should have a separation of .5em from elements on top of it and below it--
+    --refers to margin */
 
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
@@ -64,16 +77,18 @@ fieldset {
 }
 
 .btn {
-    width:400px;
+    width:100%; /*will have button go all the way across*/
     color: #FFF;
     font-weight:bold;
     background-color: #0fb784;
-    border-style:none;
+    border-style:none; /*all these three can be added to one border: color,solid,size*/
     border-width: 1px;
     border-color: #d3d3d3;
-    /* There must be a separation of 8px between the text and the border of this element */
+    /* There must be a separation of 8px between the text and the border of this element--
+     --refers to padding*/
     /* The text color of this element should be white and bold-DONE */
-    /* The border of this element should be 1px, and its color should be light grey */
+    /* The border of this element should be 1px, and its color should be light gre--
+    */
 
 }
 

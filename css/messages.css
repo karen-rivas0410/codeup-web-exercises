@@ -5,23 +5,29 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+/*}*/
+/** {*/
+    /*background-color: red; this adds it to all the page*/
+/*}*/
 
 .message {
     width: 600px;
-    border-style: none;;
-    border-radius: 40px;
+    margin: 2px 0;
+    border-style: none; /*you can use border: 1px solid lighgrey; for this exercise*/
+    border-radius: 5px;
 }
 
 .message-info {
-    background-color: rgb(212	240	218	);
+    background: rgb(208	222	252)	;
+    color: rgb(82	83	162	);
 }
 
 .message-success {
-    background-color: 214	242	220	;
+    background-color: rgb(214	242	220	);
 }
 
 .message-warning {
-    background-color: rgb(250	248	204	) ;
+    background-color: rgb(250	248	204	);
 }
 
 .message-error {
