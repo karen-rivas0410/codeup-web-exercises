@@ -10,7 +10,7 @@ var userFavColor = prompt('Please enter your favorite color?');
 alert('Great, I love' + ' '  + userFavColor + ' ' + 'too!');
 
 
-// exercise three part one
+// EXERCISE THREE PART ONE///
 
 var costPerDay = parseFloat(prompt('What is the cost per day in dollars'));
 
