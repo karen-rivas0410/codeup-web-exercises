@@ -1,0 +1,9 @@
+
+
+.jumbotron {
+    background: url("../img/pizza.png")rgb(238 238 238);
+    background-size: cover;
+}
+.jumbotron h1  {
+    opacity: .6;
+}
