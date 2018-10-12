@@ -1,4 +1,4 @@
-(function() {
+// (function() {
     "use strict";
 
     /**
@@ -16,7 +16,7 @@
     //     firstName: "Karen",
     //     lastName: "Rivas"
     // };
-    //
+
     // console.log(person.firstName);
     // console.log(person.lastName);
 
@@ -39,6 +39,11 @@
     // };
     // console.log(person.sayHello());
 
+
+    // or you can just add the last property to the previous one
+    //would be just person.propertyName : yada yada yada
+
+
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -52,7 +57,8 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-
+        //has two separate functions bc they have two different things they are asking for 1) DOING THE CALCULATIONS
+        // 2) PRODUCTING THE FINAL OUTPUT- IE THE COMPLETE STRING.//
 
     var shoppers = [
         {name: 'Cameron', amount: 180},
@@ -60,18 +66,20 @@
         {name: 'George', amount: 320}
     ];
 
+    var discount = (shoppers.amount * .12);
+    var totalBill = (shoppers.amount + discount);
 
-
+function displayInfo(shopper) {      //DON'T FORGET TO ADD THE FUNCTION//
     shoppers.forEach(function(shopper) {
             if (shopper.amount > 200){
-                console.log(shopper.name + "You get a discount of: " + shopper.name)
-
+                console.log(shopper.name + " You get a discount of:" + discount + "Your Total is: " + totalBill.toFixed(2));
             }else {
-                console.log(alert("You do not get a discount; sorry!!! Your Total is:"))
+                console.log(shopper.name + " You do not get a discount of 12%; Sorry!!! Your Total is: " + shopper.amount.toFixed(2));
             }
     });
+}
 
-    /** TODO:
+/** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
      * property. The author property should be an object with properties
@@ -83,8 +91,6 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-
-
 
     var books = [
         {
@@ -150,12 +156,17 @@
      *      ---
      *      ...
      */
+///have to iterate over an array of objects-USE FOR EACH//
 
-    books.forEach(function(book, index) {
+    books.forEach(function(book, index) { //instead of the console.log use the var message to start building the actual code//
         console.log("Book # " + (index + 1));
         console.log("Title:" + book.title);
         console.log("Author: " + book.author.firstName + ' ' + book.author.lastName);
+        console.log('---');
     });
+
+
+    for (var i = 0;i < books.length;i += 1);
 
     
 
@@ -168,7 +179,6 @@
      */
 
     // function createBook(title,author) {
-    //
     //     return books
     // }
     
@@ -181,4 +191,4 @@
      */
 
 
-})();
+// })();
