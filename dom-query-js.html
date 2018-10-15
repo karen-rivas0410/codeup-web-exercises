@@ -36,11 +36,15 @@
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         document.getElementById("main-header").innerHTML = "JavaScript is Cool!";
 
+        //alternative to this is mainHeader.innerHTML = "YADA YADA YADA"//
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
 
         console.log(subHeader);
+
+        //ALTERNATIVE TO THIS IS var subHeader = document.querySelector("#ID")//
+
 
         // TODO: Set the text color of subHeader to blue
         document.getElementById("sub-header").style.color = "blue";
@@ -49,7 +53,7 @@
         // TODO: Uncomment the next line and get all list items
         // var listItems = document.querySelector('h1 ul');
 
-        var listItems = document.getElementsByTagName("ul");
+        var listItems = document.getElementsByTagName("li");
 
         console.log(listItems);
 
@@ -58,20 +62,24 @@
         // listItemsArr.forEach(function(element) {
         //         element.style.color = "grey";
         // });
-        //     for (var i = 0; i < listItems.length; i += 2) {
-        //         listItems[i].style.color = "purple";
-        //     }
 
-        var listItemsArr = Array.from(listItems);
+            for (var i = 0; i < listItems.length; i += 2) {
+                listItems[i].style.color = "purple";
+            }
 
-        listItemsArr.forEach(function (element, index) {
-            if (index % 2 === 0) {
-            element.style.color = 'red';
-         }
-         });
+        // var listItemsArr = Array.from(listItems);
+        //
+        // listItemsArr.forEach(function (element, index) {
+        //     if (index % 2 === 0) {
+        //     element.style.color = 'red';
+        //  }
+        //  });
 
         // TODO: Set text color of li with dbid = 1 to blue
-        document.getElementsByTagName("li")[0].style.color = "blue";
+        document.getElementsByTagName("li")[0].style.color = "blue"; // only can do this if the first but if you have many items that you want to
+    //it would be harder to do.//
+
+    //this question and the one before go together//
 
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
@@ -80,7 +88,11 @@
         console.log(subParagraphs);
 
     // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        document.getElementsByClassName("sub-paragraph")[0].innerHTML = "Mission Accomplished!";
+        document.getElementsByClassName("sub-paragraph")[0].innerText = "Mission Accomplished!";
+
+        //or you can use innerText cause it asked for the text//
+
+
 
 
     // })();
