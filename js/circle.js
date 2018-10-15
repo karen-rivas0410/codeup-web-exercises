@@ -9,7 +9,7 @@ var circle = {
         // hint: area = pi * radius^2
     },
     logInfo: function (doRounding) {
-        if (doRounding === true) {
+        if (doRounding === true) { ///make sure you have the right equal sign go over operators//
             console.log(Math.round(this.getArea()));
         } else {
             console.log("Area of a circle with radius: " + this.radius + ", is: " + this.getArea());
