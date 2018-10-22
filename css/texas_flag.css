@@ -1,0 +1,11 @@
+* {
+    background-color: #FFFFFF;
+}
+
+.right {
+    width:25em;
+    border: 25em; solid-color: #000000;
+    margin:10em;
+    background-color: #0c0ae2;
+
+}
