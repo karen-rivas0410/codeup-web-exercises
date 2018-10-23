@@ -24,9 +24,9 @@
 //
 // console.log(sayHello('Karen'));
 
-    function sayHello(name) {
-            return 'Hello, ' + name + '!';
-        }
+    // function sayHello(name) {
+    //         return 'Hello, ' + name + '!';
+    //     }
 
 // console.log(sayHello('Codeup'));
 
@@ -38,8 +38,13 @@
  *
  * console.log 'helloMessage' to check your work
  */
-sayHello('Karen');
-var helloMessage = sayHello('Karen');
+
+
+// sayHello('Karen');
+// var helloMessage = sayHello('Karen');
+//
+// console.log(helloMessage);
+
 
 /**
  * TODO:
@@ -48,19 +53,17 @@ var helloMessage = sayHello('Karen');
  * console.
  */
 
-// var myName
-// }
+// var myName = 'Jacob';
+// console.log(sayHello(myName));
 
 
 
-
-    // var sayHello =
 
 /**Don't modify the following line, it generates a random number between 1 and 3
   * and stores it in a variable named random
  */
 
- // var random = Math.floor((Math.random() * 3) + 1);
+ var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -79,6 +82,17 @@ var helloMessage = sayHello('Karen');
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+
+
+// function isTwo(num) {
+//     var output;
+//     output = num === Number(2);
+//     return output;
+//
+// }
+//
+// console.log(isTwo(random));
+// console.log(random);
 
 
 // function isTwo(number) {
@@ -106,6 +120,15 @@ var helloMessage = sayHello('Karen');
 
 
 
+function calculateTip(tipPercent,totalBill) {
+    var output;
+    output = parseFloat(tipPercent * totalBill);
+    return output;
+
+}
+
+console.log(calculateTip(.15, 33.42));
+
 //     function calculateTip(percentageTip,totalBill) {
 //         var awesomeTip = 0;
 //         awesomeTip = parseFloat(percentageTip * totalBill);
@@ -120,7 +143,17 @@ var helloMessage = sayHello('Karen');
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-//
+
+
+// var totalBill = prompt('What is your total bill?');
+// var tipPercent = prompt('What percentage would you like to tip?');
+// var totabill = parseFloat(totalBill);
+// var tipPercent = parseFloat(tipPercent);
+// var totalTip = calculateTip(totalBill,tipPercent);
+// alert('Here is how much you should tip: $' + totalTip.toFixed(2));
+
+
+
 //     var totalBillinput = prompt('What is your total Bill?');
 //     var tipRateInput = prompt('How much would you like to tip?');
 //     var totalBill = parseFloat(totalBillinput);
@@ -148,13 +181,35 @@ var helloMessage = sayHello('Karen');
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-    function applyDiscount(originalPrice,discountPercent){
-        var finalPriceDiscounted;
-        finalPriceDiscounted = parseFloat(originalPrice - (discountPercent * originalPrice));
-        return finalPriceDiscounted.toFixed(2);
 
-    }
 
-console.log(applyDiscount(200, .2));
+
+
+
+function applyDiscount(originalPrice,discountPercent) {
+    var output;
+    output = originalPrice - (originalPrice * discountPercent);
+    alert('Here is your total Final Bill:' + output);
+    return output;
+
+}
+
+console.log(applyDiscount(45.99, 0.12));
+
+
+
+
+
+
+
+
+// function applyDiscount(originalPrice,discountPercent){
+//         var finalPriceDiscounted;
+//         finalPriceDiscounted = parseFloat(originalPrice - (discountPercent * originalPrice));
+//         return finalPriceDiscounted.toFixed(2);
+//
+//     }
+//
+// console.log(applyDiscount(200, .2));
 
 // })();

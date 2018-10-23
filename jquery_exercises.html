@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercise</title>
+</head>
+<body>
+
+    <h1 class="codeup">Hello jQuery</h1>
+
+    <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto atque aut corporis culpa delectus
+        fugit harum illo nobis officia qui, quidem vel voluptatibus. Consequuntur exercitationem mollitia quo sed soluta!</p>
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur earum minus mollitia quae repellat veritatis voluptas.
+    Adipisci, facere veritatis! Adipisci aliquid atque enim et nesciunt pariatur perspiciatis provident veniam!</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, magni quod! Corporis dicta expedita id laboriosam non perspiciatis quo velit?
+        Animi consequuntur expedita mollitia non repellendus, sequi sit. Mollitia, repellendus.</p>
+
+    <div class="codeup">
+        <h3>NOTICE</h3>
+        <p>This is an important message! I have to go see my brother in Corpus Christi.</p>
+    </div>
+    <div class="toDoList">
+        <h4>Grocery List</h4>
+        <ul id="groceryList">
+            <li>milk</li>
+            <li>honey</li>
+            <li id="veryImportant">grapes</li>
+            <li>bread</li>
+            <li>jelly</li>
+            <li>peanut butter</li>
+            <li>crackers</li>
+        </ul>
+    </div>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+        "use strict";
+        $(document).ready(function(){
+            // var contents = $("#veryImportant").html();
+            // alert(contents);
+
+            // $(".codeup").css("border", "1px solid red");
+            //
+            // $("li").css("font-size", "20px");
+
+            // $("h1").css("background", "yellow");
+            // $("p").css("background", "yellow");
+            // $("li").css("background", "yellow");
+            // $("li").css("background", "red");
+
+            //REMEMBER YOU CAN USE THE MULTIPLE SELECTOR AS WELL//
+
+
+            // var alertContent = $("h1").html();
+            // alert(alertContent)
+
+            $("h1,p,li").css("background", "yellow")
+
+
+
+
+
+
+
+
+
+        //     'h1').click(function() {
+        //     $(this).css("background-color", "blue");
+        // });
+        //
+        // $('p').dblclick(function() {
+        //     $(this).css('font-size', '18px');
+        // });
+        //
+        // $('li').hover(function() {
+        //     $(this).css('color', 'red');
+        // }, function() {
+        //     $(this).css('color', 'black');
+        // });
+
+
+        });
+    </script>
+</body>
+</html>

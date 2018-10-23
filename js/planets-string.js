@@ -2,8 +2,8 @@
     "use strict";
 
 
-    // var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-    // var planetsArray = planetsString.split("|");
+    var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
+    var planetsArray = planetsString.split("|");
 
     /**
      * TODO:
@@ -12,7 +12,7 @@
      * console.log planetsArray to check your work
      */
 
-    // console.log(planetsArray);
+    console.log(planetsArray);
 
 
     /**
@@ -21,9 +21,10 @@
      * results. Why might this be useful?
      */
 
-    // planetsArray.join('<br>');
-    // console.log(planetsArray);
-
+    planetsArray.join('<br>');
+    console.log(planetsArray);
+///or you can //
+     planetsString = planetsArray.join('<br>');
 
 
     /**
@@ -33,15 +34,9 @@
      * string, and <li> tags around each planet.
      */
 
+    var htmlString = "<ul>";
+    htmlString
 
-    // var columnNames = array.shift();
-    // columnNames = columnNames.split(", ");
-    // var htmlString = "<table><tr><th>" + columnNames[0] + "</th><th>" + columnNames[1] + "</th></tr>";
-    // array.forEach(function(line) {
-    //     var pieces = line.split(",");
-    //     htmlString += "<tr>"
-    //         + "<td>" + pieces[0] + "</td>"
-    //         + "<td>" + pieces[1] + "</td></tr>";
 
 })();
 
