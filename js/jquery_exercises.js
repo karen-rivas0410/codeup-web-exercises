@@ -2,6 +2,6 @@
 
 $(document).ready(function() {
     console.log('doc',$document);
-    alert('Hello, jQuery');
+alert('Hello, jQuery');
 
 };
