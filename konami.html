@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+    <h1>Konami Code</h1>
+
+    <div class="giphy"><img src="img/konami.webp" alt=""></div>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+        "use strict";
+        $(document).ready(function() {
+            $(".giphy").hide();
+
+        var konamiCode = "3838404037393739666513";
+        var input = "";
+        var timeTillStart;
+        // var mode = false;
+        // var showGiphy =false;
+
+        $(document).keyup(function(event){
+            console.log(event.keyCode);
+        });
+
+        $(document).keyup(function(event) {
+            input += event.keyCode;
+            if (input == konamiCode) {
+                console.log(input)//the secret code
+            }
+        };
+        // $(document).ready(function() {
+        //     setInterval(function() { $('#info').html('Keystroke: ' + input); }, 100); });
+
+            // $(document).keyup(function(event) {
+            //     // alert(e.which);
+            //     input += event.keyCode;
+            //     // clearTimeout(timeTillStart);
+            //     timeTillStart = setTimeout(function() { input = ""; }, 1000);
+            //     check_input();
+            // });
+
+
+
+        });
+    </script>
+</body>
+</html>
