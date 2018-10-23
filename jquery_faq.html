@@ -3,8 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>jquery Faq</title>
+    <style>
+        .invisible {
+            display: none:
+        }
+    </style>
 </head>
 <body>
+
+    <h1>Natinal Parks</h1>
+    <dl>
+        <dt>Grand Canyon</dt>
+            <dd class="invisible">The park's central feature is the Grand Canyon, a gorge of the Colorado River, which is often considered one of the Wonders of the World.</dd>
+        <dt>Yosemite</dt>
+            <dd class="invisible">The park, which is managed by the U.S. National Park Service, covers an area of 747,956 acres</dd>
+        <dt>Glacier National Park</dt>
+            <dd class="invisible">FAQ goes here</dd>
+        <dt>FAQ 4</dt>
+            <dd class="invisible">FAQ goes here</dd>
+        <dt>FAQ 5</dt>
+            <dd class="invisible">FAQ goes here</dd>
+        <dt>FAQ 6</dt>
+            <dd class="invisible">FAQ goes here</dd>
+        <dt>FAQ 7</dt>
+            <dd class="invisible">FAQ goes here</dd>
+        <dt>FAQ 8</dt>
+            <dd class="invisible">FAQ goes here</dd>
+        <dt>FAQ 9</dt>
+            <dd class="invisible">FAQ goes here</dd>
+        <dt>FAQ 10</dt>
+            <dd class="invisible">FAQ goes here</dd>
+    </dl>
+
+
+    <button>Toggle this!!!</button>
+    
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+        "use strict";
+        $(document).ready(function () {
+
+
+
+            $("button").click(function () {
+                $("dd").toggleClass('invisible');
+            });
+
+            $("a").click(function(e) {
+                e.defaultSelected
+
+                
+            });
+
+
+            $("dd").click(function () {
+                $(this).css("background", "yellow");
+
+
+            })
+
+
+        })
+
+
+    </script>
 
 </body>
 </html>
