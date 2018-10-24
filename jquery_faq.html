@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>jquery Faq</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style>
         .invisible {
-            display: none:
+            display: none;
         }
     </style>
 </head>
 <body>
+    <div class="container row col-sm col-sm col-sm">
+        <div>
+            <img src="img/mona_lisa.jpg" alt="mona lisa">
+            <button>Swap</button>
+        </div>
+        <div>
+            <img src="img/iceberg.jpg" alt="iceberg">
+            <button>Swap</button>
+        </div>
+        <div>
+            <img src="img/iron_giant.jpeg" alt="iron giant">
+            <button>Swap</button>
+        </div>
+    </div>
 
-    <h1>Natinal Parks</h1>
+    <h1>FAQ on National Parks</h1>
     <dl>
         <dt>Grand Canyon</dt>
             <dd class="invisible">The park's central feature is the Grand Canyon, a gorge of the Colorado River, which is often considered one of the Wonders of the World.</dd>
@@ -35,8 +50,35 @@
             <dd class="invisible">FAQ goes here</dd>
     </dl>
 
+    <h3 id="national-parks-heading">National Parks</h3>
+    <ul id="national-parks">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+    <h3>State Parks of Texas</h3>
+    <ul id="state-parks-texas">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+    <h3>State Parks of Illinois</h3>
+    <ul id="state-parks-illinois">
+        <li>Starved Rock State Park</li>
+        <li>Big Matthiessen State Park</li>
+        <li>Illinois Beach State Park</li>
+        <li>Moraine Hills State Park</li>
+        <li>Kankakee River State Park</li>
+    </ul>
 
-    <button>Toggle this!!!</button>
+
+    <!--<button>Toggle this!!!</button>-->
+
+    <button class="lastLi">Highlight This!!!!!</button>
     
     <script src="js/jquery-2.2.4.min.js"></script>
     <script>
@@ -45,28 +87,40 @@
 
 
 
-            $("button").click(function () {
-                $("dd").toggleClass('invisible');
+            // $("button").click(function () {
+            //     $("dd").toggleClass('invisible');
+            // });
+
+            // $("a").click(function(e) {
+            //     e.defaultSelected
+            // });
+            //
+            //
+            // $("dd").click(function () {
+            //     $(this).css("background", "yellow");
+            //
+            //
+            // });
+
+            //TRAVERSING METHODS//
+
+            $("button").click(function() {
+                $("ul").children().eq(4).css("background-color", "yellow");
             });
-
-            $("a").click(function(e) {
-                e.defaultSelected
-
-                
+            $("h3").click(function () {
+                $("ul").children().css("font-weight", "bold");
             });
-
-
-            $("dd").click(function () {
-                $(this).css("background", "yellow");
-
-
-            })
+            $("li").click(function () {
+                $("ul").children().first().css("color", "blue");
+            });
 
 
         })
 
 
     </script>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
