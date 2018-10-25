@@ -4,50 +4,85 @@
     <meta charset="UTF-8">
     <title>jquery Faq</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <style>
-        .invisible {
-            display: none;
+
+        /*.invisible {*/
+            /*display: none;*/
+        /*}*/
+        .first {
+            width: 400px;
+            height: 400px;
+            border: 4px solid black;
+            flex-flow: row;
+            background-image: url("./img/mona_lisa.jpg");
+
+        }
+
+        .second {
+            width: 400px;
+            height: 400px;
+            border: 4px solid black;
+            flex-direction: row;
+            background-image: url("img/iceberg.jpg");
+        }
+
+        .third {
+            width: 400px;
+            height: 400px;
+            border: 4px solid black;
+            /*box-sizing: border-box;*/
+            background-image: url("img/iron_giant.jpeg");
         }
     </style>
 </head>
 <body>
-    <div class="container row col-sm col-sm col-sm">
-        <div>
-            <img src="img/mona_lisa.jpg" alt="mona lisa">
-            <button>Swap</button>
-        </div>
-        <div>
-            <img src="img/iceberg.jpg" alt="iceberg">
-            <button>Swap</button>
-        </div>
-        <div>
-            <img src="img/iron_giant.jpeg" alt="iron giant">
-            <button>Swap</button>
-        </div>
+
+    <h1 class="text-center">jQuery Exercises</h1>
+
+    <!--<div class="alert alert-warning alert-dismissible" role="alert">-->
+
+    <h2 id=register_id class="invisible text-center">Log In!!!!</h2>
+
+    <!--</div>-->
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
     </div>
 
+    <button id="firstBtn">Swap</button>
+    <button id="secondBtn">Swap</button>
+    <button id="thirdBtn">Swap</button>
+    </div>
+
+    <div id="subscribe">
+        <h1>Would you like to sign up for our newsletter?<span>X</span></h1>
+    </div>
+    <div class="container">
     <h1>FAQ on National Parks</h1>
     <dl>
         <dt>Grand Canyon</dt>
             <dd class="invisible">The park's central feature is the Grand Canyon, a gorge of the Colorado River, which is often considered one of the Wonders of the World.</dd>
         <dt>Yosemite</dt>
-            <dd class="invisible">The park, which is managed by the U.S. National Park Service, covers an area of 747,956 acres</dd>
+            <dd class="invisible">The park, which is managed by the U.S. National Park Service, covers an area of 747,956 acres.</dd>
         <dt>Glacier National Park</dt>
-            <dd class="invisible">FAQ goes here</dd>
-        <dt>FAQ 4</dt>
-            <dd class="invisible">FAQ goes here</dd>
-        <dt>FAQ 5</dt>
-            <dd class="invisible">FAQ goes here</dd>
-        <dt>FAQ 6</dt>
-            <dd class="invisible">FAQ goes here</dd>
-        <dt>FAQ 7</dt>
-            <dd class="invisible">FAQ goes here</dd>
-        <dt>FAQ 8</dt>
-            <dd class="invisible">FAQ goes here</dd>
-        <dt>FAQ 9</dt>
-            <dd class="invisible">FAQ goes here</dd>
-        <dt>FAQ 10</dt>
-            <dd class="invisible">FAQ goes here</dd>
+            <dd class="invisible">Glacier National Park has some of the most pristine and beautiful landscapes in the country and covers an area of over 1,000,000 acres.</dd>
+        <dt>Zion National Park</dt>
+            <dd class="invisible">One of the main sites within the park is the impressive Zion Canyon – this natural landmark is 15 miles long and has a beautiful colouration from the Navajo Sandstone.</dd>
+        <dt>Rocky Mountain National Park</dt>
+            <dd class="invisible">This park was established in 1915 and has since been designated a UNESCO World Biosphere Reserve.</dd>
+        <dt>Olympic National Park</dt>
+            <dd class="invisible">Olympic Park actually has four different regions – the epic Pacific coastline, the western temperate rainforest, the alpine regions and the drier eastern forests.</dd>
+        <dt>Yellowstone National Park</dt>
+            <dd class="invisible">Aside from the volcanic landscapes, Yellowstone also has a varied ecosystem including vast meadows, pine forests and mountains.</dd>
+        <dt>Great Smoky National Park</dt>
+            <dd class="invisible">This national park spans the Great Smoky Mountains themselves which are in turn part of the Appalachian Mountain Chain.</dd>
+        <dt>Acadia National Park</dt>
+            <dd class="invisible">Acadia National Park is one of the few parks that is located exclusively on an Island – this park can be found on the southern coast of Maine on Mount Desert Island and the surrounding archipelago.</dd>
+        <dt>Grand Teton National Park</dt>
+            <dd class="invisible">This park covers an area of 310,000 acres and lies to the south of Yellowstone National Park.</dd>
     </dl>
 
     <h3 id="national-parks-heading">National Parks</h3>
@@ -75,51 +110,79 @@
         <li>Kankakee River State Park</li>
     </ul>
 
+    <!--<a href="">Click Me to Toggle!!</a> -->
 
-    <!--<button>Toggle this!!!</button>-->
+    <button id="toggle">Toggle this!!!</button>
 
-    <button class="lastLi">Highlight This!!!!!</button>
+    <button id="lastLi">Highlight This!!!!!</button>
+    </div>
     
     <script src="js/jquery-2.2.4.min.js"></script>
     <script>
         "use strict";
         $(document).ready(function () {
 
+            //ATTRIBUTE METHODS//
 
-
-            // $("button").click(function () {
-            //     $("dd").toggleClass('invisible');
-            // });
+            $("#toggle").click(function () {
+                $("dd").toggleClass('invisible');
+            });
 
             // $("a").click(function(e) {
             //     e.defaultSelected
             // });
-            //
-            //
-            // $("dd").click(function () {
-            //     $(this).css("background", "yellow");
-            //
-            //
-            // });
 
-            //TRAVERSING METHODS//
 
-            $("button").click(function() {
-                $("ul").children().eq(4).css("background-color", "yellow");
+            $("dt").click(function () {
+                $(this).css("background", "yellow");
+
+
+            });
+
+            // // TRAVERSING METHODS//
+
+            $("#lastLi").click(function() { //look up fist exercise that justin did//
+                $("ul").children().css("background-color", "yellow");
             });
             $("h3").click(function () {
                 $("ul").children().css("font-weight", "bold");
             });
             $("li").click(function () {
-                $("ul").children().first().css("color", "blue");
+                $(this).parent().children().first().css("color", "blue");  //this one highlights the last one of every li//
             });
 
+            //BONUS//
 
-        })
+            $("div").children().first().addClass("first");
+            $("div").children().first().next().addClass("second");
+            $("div").children().first().next().next().addClass("third");
+
+
+
+
+            //EFFECTS EXERCISES//
+
+            $("#subscribe").children().children("span").click(function() {  //or you can add an id to span and call the id//
+                $("div").hide();
+            });
+
+            // var ulList =
+                $("ul").hide();
+
+            $("h3").click(function() {
+                $(this).next().slideToggle(); //to do all the ul at one time would be ulList.slidetoggle();
+            });
+
+            setTimeout(function(){
+                $("#register_id").fadeIn();
+            }, 8000);
+
+        });
+
 
 
     </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
