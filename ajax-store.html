@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>My Tool Store</h1>
+<h1 class="display-1">My Tool Store</h1>
 
 <table id="products">
     <thead>
@@ -17,7 +17,7 @@
             <th>Categories</th>
         </tr>
     </thead>
-    <tbody class="invisible" id="insertProducts">
+    <tbody id="insertProducts">
     <!--<tr>-->
         <!--<td>title</td>-->
         <!--<td>quantity</td>-->
@@ -62,7 +62,10 @@
         // offset: 20
     }).done(function(tools) {
         $("#insertProducts").append(addHtml(tools));
-        $("#")
+
+        $("#refreshBtn").click(function () {
+            $("#insertProducts").refresh(addHtml(tools));
+        })
 
     });
 
