@@ -46,5 +46,21 @@
             "gas"
         ],
         "price": 8000
-    }
+    },{
+    "title": "Pressure Washer",
+    "quantity": 10,
+    "categories": [
+        "tool",
+        "gas"
+    ],
+    "price": 1000
+}, {
+    "title": "Generator",
+    "quantity": 45,
+    "categories": [
+        "tool",
+        "gas"
+    ],
+    "price": 8000
+}
 ]
