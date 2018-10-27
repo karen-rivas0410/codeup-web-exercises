@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Map</title>
+    <link rel="stylesheet" href="css/weather_map.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 
 
+    <h1>Weather Application</h1>
+    <h3>San Antonio</h3>
+    <input type="text" name="longitude" placeholder="Enter Longitude"><br>
+    <input type="text" name="latitude" placeholder="Enter Latitude"><br>
+    <button>Add Location</button>
+
+    <div id="weatherReportOne"></div>
+    <div id="weatherReportTwo"></div>
+    <div id="saWeatherReportThree"></div>
+
+
+
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+    $(document).ready(function () {
+
+        // function addHtml(locatiomForecasts) {
+            // var updatedForecasts = "";
+            // var blog = "<h1>";
+            // forecasts.forEach(function(forecast) {
+            //     // output += "<tr>";
+            //     updatedForecasts += "<>" + forecast.title + "</>";
+            //     updatedForecasts += "<p>" + forecast.content + "</p>";
+            //     updatedForecasts += "<p>" + forecast.categories + "</p>";
+            //     updatedForecasts += "<row>" + forecast.date + "</row>";
+            //     // output += "</tr>";
+            //
+            // });
+            // return output;
+        // }
+
+    // make a function to get the weather object from the OpenWeatherMap API
+    // base url should be "http://api.openweathermap.org/data/2.5/forecast"
+        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+            APPID: "88951cfde8161e5e0fff71ff83513be9",
+            id:     4726206,
+            units:"imperial"
+    // practice writing console.logs of various parts of the OpenWeatherMap object...
+        }).done(function(data) {
+            console.log(data);
+    // console.log the current weather description
+            console.log(data.list[0].weather[0].description);
+    // console.log the humidity of the 2nd day
+            console.log(data.list[11].main.humidity);
+
+    // console.log the humidity of all the days (use a for loop)
+            for (var i = 0; i < data.list.length; i += 1) {         //this will loop for all 3 days remember 3hr block intervals//
+                console.log(data.list[i].main.humidity);
+            };
+
+    // console.log the temperature of the 3rd day in celsius
+    // console.log the temperature of the 3rd day in Fahrenheit
+    // console.log all types of information you will ultimately display for a single day in the 3-day forecast div
+        });
+    // console.log all type of information you will ultimately display for all days in the 3-day forecast divs
+    // write html and css to make/style a three-day forecast set of divs (may use design from curriculum)
+    // create a function to append specific parts of the OpenWeatherMap map object to the DOM and call it in the .done() of the OpenWeatherMap map GET request.
+    // remember to first console.log specific data from the OpenWeatherMap object, then work on adding to the DOM
+    // read and reread the curriculum and OpenWeatherMap docs carefully on how to get an image of the weather forecast
+    // hint: "http://openweathermap.org/img/w/" + whateverTheWeatherIconValueIs
+    // verify that the OpenWeatherMap data populates by hard coding in lat and lon values
+    // create lat and lon variables to hold lat and lon values.
+    // add lat and lon properties to the function that calls the OpenWeatheMap API GET request
+    // add an input field for lat and lon with button that fires a new request to the OpenWeatherMap API and passes the lat and lon values from the input fields into the request.
+
+
+    });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
