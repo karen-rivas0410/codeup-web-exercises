@@ -24,7 +24,7 @@ $(document).ready(function () {
 
             // updateForecast += '<div class = col s4>';
             updateForecast += '<div class="col s4 card-panel cyan black-text">';
-            updateForecast += '<div>' + "High " + getMinMaxDayTemp(data, 1).max.toFixed(0) + "/ " + "Low " + getMinMaxDayTemp(data, 1).min.toFixed(0) + '</div>';
+            updateForecast += '<p>' + "High " + temp.max.toFixed(0) + "/ " + "Low " + temp.min.toFixed(0) + '</p>';
             updateForecast += '<p>Clouds: ' + data.list[i * 8].weather[0].description + '</p>';
             updateForecast += '<p>Humidity: ' + data.list[i * 8].main.humidity + '%</p>';
             updateForecast += '<p>Wind: ' + data.list[i * 8].wind.speed + " mph" + '</p>';
@@ -36,17 +36,53 @@ $(document).ready(function () {
         return updateForecast;
     }
 
+    ///look into .getfullyear to get the date added to the html
 
 
     $.get('http://api.openweathermap.org/data/2.5/forecast', {
         APPID: '88951cfde8161e5e0fff71ff83513be9',
         id:     4726206,
         units:'imperial'
-        // dataType: 'jsonP'
-        // practice writing console.logs of various parts of the OpenWeatherMap object...
+        // dataType: 'jsonP'//This is when a webservice is expected to receive json
     }).done(function(data) {
         $('#weatherReport').append(addHtml(data));
     });
+
+            // WEATHER MAP STARTS HERE
+
+    // Set our map options
+    var mapOptions = {
+        zoom: 13,
+        center: {
+            lat:  29.426791,
+            lng: -98.489602
+        }
+    };
+    // Render the map
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+    var address = "8523 Blanco Rd, San Antonio, TX 78216";
+    var geocoder = new google.maps.Geocoder();
+
+    // Geocode our address
+    geocoder.geocode({ "address": address }, function(results, status) {
+
+        // Check for a successful result
+        if (status == google.maps.GeocoderStatus.OK) {
+            // Recenter the map over the address
+            map.setCenter(results[0].geometry.location);
+        } else {
+            alert("Geocoding was not successful - STATUS: " + status);
+        }
+    });
+    var marker = new google.maps.Marker({
+        position: {lat: 29.544205, lng: -98.507507},
+        map: map
+    });
+    var infowindow = new google.maps.InfoWindow({
+        content: "Brasa Chicken: Delicious Peruvian Restaurant"
+    });
+    infowindow.open(map, marker);
 
 
 
