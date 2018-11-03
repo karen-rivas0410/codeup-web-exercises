@@ -33,7 +33,7 @@
 
 
 <script>
-// (function() {
+(function() {
     "use strict";
     // TODO: Create an ajax GET request for /data/inventory.json
 
@@ -57,20 +57,32 @@
     return output;
     }
 
-    $.get("data/inventory.json", {
-        // limit:  10,
-        // offset: 20
-    }).done(function(tools) {
-        $("#insertProducts").append(addHtml(tools));
+    //AJAX REQUEST//
 
-        $("#refreshBtn").click(function () {
-            $("#insertProducts").refresh(addHtml(tools));
-        })
+    // function toolProduct () {  ///wont let me create a function for the ajax request. Need to see whats wrong//
+        $.get("data/inventory.json").done(function(data) {
+            $("#insertProducts").append(addHtml(data));
+        }).fail(function () {           //always good to have the fail added as well/
+            console.log("request failed")
+        });
+    // };
 
+
+
+//REFRESH BTN TO ADD MORE PRODUCTS//
+    $("#refreshBtn").click(function() {
+        $("#insertProducts").html("");
+        $.ajax("data/inventory.json").done(function(data) {
+            $("#insertProducts").html(addHtml(data));
+        });
     });
 
+    // $("#refreshBtn").click(function () {
+    //     $("#insertProducts").html("");
+    //     toolProduct();
+    // });
 
-// })();
+})();
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
