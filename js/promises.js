@@ -30,7 +30,7 @@ const githubApiBaseUrl ='https://api.github.com';
 const token =
 const options = {
 
-}
+};
 
     const mostRecentCommit = (username) => {
         const userEventsEndpoint = `/users/${username}/events/public`;
