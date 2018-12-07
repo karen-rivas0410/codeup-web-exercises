@@ -1,0 +1,10 @@
+body {
+    background-image: url("mountain.jpeg");
+    background-size: cover;
+}
+
+.jumbotron {
+    background: none;
+    font-size: xx-large;
+    text-align: center;
+}
